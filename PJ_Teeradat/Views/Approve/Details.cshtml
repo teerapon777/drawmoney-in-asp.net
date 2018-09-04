@@ -1,0 +1,74 @@
+﻿@model PJ_Teeradat.Models.TbWithdraw
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+<h2>รายละเอียดโครงการ</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateGo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateGo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProvinceId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Province.ProvinceName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateApplicant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateApplicant)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Firstname)
+            @Html.DisplayFor(model => model.User.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusName)<br><br>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ApproveList">กลับสู่รายการ</a>
+</div>

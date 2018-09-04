@@ -1,0 +1,25 @@
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=PJ_Teeradat
+--content-root=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Approve\ApproveList.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Approve\Details.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Approve\DetailsDrow.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Approve\DrowList.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Drowmoney\Create.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Drowmoney\Details.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Drowmoney\DrowList.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Drowmoney\Edit.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Home\Index.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Shared\Error.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Shared\_Layout.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Shared\_Layout_User.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\Details.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\Edit.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\Login.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\Profile.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\Register.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\User\UserList.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\_ViewImports.cshtml
+--file=C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\Views\_ViewStart.cshtml

@@ -1,0 +1,22 @@
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.deps.json
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.runtimeconfig.json
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.runtimeconfig.dev.json
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.dll
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.csproj.CoreCompileInputs.cache
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.AssemblyInfoInputs.cache
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.AssemblyInfo.cs
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.pdb
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.dll
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.pdb
+C:\Users\Teerapon\Desktop\Data mining\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.csprojResolveAssemblyReference.cache
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.deps.json
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.runtimeconfig.json
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.runtimeconfig.dev.json
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.dll
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\bin\Debug\netcoreapp2.0\PJ_Teeradat.pdb
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.csprojResolveAssemblyReference.cache
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.csproj.CoreCompileInputs.cache
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.AssemblyInfoInputs.cache
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.AssemblyInfo.cs
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.dll
+C:\Users\Teerapon\Desktop\PJ_Teeradat\PJ_Teeradat\obj\Debug\netcoreapp2.0\PJ_Teeradat.pdb

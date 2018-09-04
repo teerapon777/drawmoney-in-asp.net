@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbGender>
+
+@{
+    ViewData["Title"] = "GenderList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการเพศ</h2>
+
+        <p>
+            <a asp-action="CreateGender">เพิ่มข้อมูล</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        เพศ
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GenderName)
+                        </td>
+                        <td>
+                            <a asp-action="EditGender" asp-route-id="@item.GenderId">แก้ไข</a> |
+                            @Html.ActionLink("ลบ", "DeleteGender", new { id = item.GenderId },
+                      new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

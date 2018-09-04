@@ -1,0 +1,70 @@
+﻿@model PJ_Teeradat.Models.TbWithdraw
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserId != null)
+    {
+        <h2>แก้ไขข้อมูล</h2>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ProjectId" />
+                    <input type="hidden" asp-for="UserId" />
+                    <input type="hidden" asp-for="DateApplicant" />
+                    <input type="hidden" asp-for="StatusId" />
+
+                    <div class="form-group">
+                        <label asp-for="ProjectName" class="control-label"></label>
+                        <input asp-for="ProjectName" class="form-control" />
+                        <span asp-validation-for="ProjectName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateGo" class="control-label"></label>
+                        <input asp-for="DateGo" class="form-control" />
+                        <span asp-validation-for="DateGo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Amount" class="control-label"></label>
+                        <input asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Location" class="control-label"></label>
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProvinceId" class="control-label"></label>
+                        <select asp-for="ProvinceId" class="form-control" asp-items="ViewBag.ProvinceId"></select>
+                        <span asp-validation-for="ProvinceId" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Detail" class="control-label"></label>
+                        <textarea asp-for="Detail" class="form-control" rows="10" cols="100" style="resize:none"> </textarea>
+
+                        <span asp-validation-for="Detail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="บันทึก" class="btn btn-default" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="DrowList">กลับสู่รายการ</a>
+        </div>
+
+    }
+    else
+    {
+        <h2>กรุณาเข้าสู่ระบบ</h2>
+    }
+
+}

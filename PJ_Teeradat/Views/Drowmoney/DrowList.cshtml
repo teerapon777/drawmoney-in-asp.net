@@ -1,0 +1,104 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbWithdraw>
+
+@{
+    ViewData["Title"] = "DrowList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserId != null)
+    {
+        <h2>รายการขอเบิก</h2>
+        <div class="well">
+            <form asp-action="Search" method="post">
+                <div class="card mb-4">
+                    <h2 class="card-header">ค้นหา</h2>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="txt" placeholder="ชื่่อโครงการ , สถานที่ , จังหวัด , ชื่อผู้ขอเบิก">
+                            <span class="input-group-btn">
+                                <input class=" btn btn-secondary" type="submit" name="button" id="button" value="ค้นหา" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProjectName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateGo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProvinceId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateApplicant)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserId)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.StatusId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProjectName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateGo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Province.ProvinceName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateApplicant)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.Firstname)
+                            @Html.DisplayFor(modelItem => item.User.Lastname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status.StatusName)
+                        </td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ProjectId">แก้ไข</a> |
+                            <a asp-action="Details" asp-route-id="@item.ProjectId">รายละเอียด</a> |
+                            @Html.ActionLink("ลบ", "Delete", new { id = item.ProjectId },
+                                       new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>กรุณาเข้าสู่ระบบ</h2>
+    }
+
+}

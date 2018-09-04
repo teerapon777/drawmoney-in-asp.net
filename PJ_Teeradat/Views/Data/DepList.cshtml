@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbDepartment>
+
+@{
+    ViewData["Title"] = "DepList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการหน่วยงาน/คณะ</h2>
+
+        <p>
+            <a asp-action="CreateDep">เพิ่มข้อมูล</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ชื่อหน่วยงาน/คณะ
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DepartmentName)
+                        </td>
+                        <td>
+                            <a asp-action="EditDep" asp-route-id="@item.DepartmentId">แก้ไข</a> |
+                            @Html.ActionLink("ลบ", "DeleteDep", new { id = item.DepartmentId },
+                           new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

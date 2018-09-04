@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbApprovalresults>
+
+@{
+    ViewData["Title"] = "AppList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการผลอนุมัติ</h2>
+
+        <p>
+            <a asp-action="CreateApp">เพิ่มข้อมูล</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ผลอนุมัติ
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ApprovalResultsName)
+                        </td>
+                        <td>
+                            <a asp-action="EditApp" asp-route-id="@item.ApprovalResultsId">Edit</a> |
+                            @Html.ActionLink("ลบ", "DeleteApp", new { id = item.ApprovalResultsId },
+                      new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

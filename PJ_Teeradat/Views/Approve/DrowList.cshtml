@@ -1,0 +1,88 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbWithdraw>
+
+@{
+    ViewData["Title"] = "DrowList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "3")
+    {
+        <h2>รายการขอเบิก</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProjectName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateGo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProvinceId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateApplicant)
+                    </th>
+
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StatusId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProjectName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateGo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Province.ProvinceName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateApplicant)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.Firstname)
+                            @Html.DisplayFor(modelItem => item.User.Lastname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status.StatusName)
+                        </td>
+                        <td>
+                            <a asp-action="DetailsDrow" asp-route-id="@item.ProjectId">รายละเอียดโครงการ</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}
+
+

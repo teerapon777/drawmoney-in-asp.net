@@ -1,0 +1,16 @@
+﻿@using Stimulsoft.Report.Web;
+@using Stimulsoft.Report.Mvc;
+
+@{
+    ViewData["Title"] = "Report_Drowmoney.mrt - Viewer";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+@Html.StiNetCoreViewer(new StiNetCoreViewerOptions()
+{
+    Actions =
+{
+GetReport = "GetReport",
+ViewerEvent = "ViewerEvent"
+}
+})

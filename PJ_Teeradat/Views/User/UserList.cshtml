@@ -1,0 +1,129 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbUser>
+
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการชื่อผู้ใช้</h2>
+        <div class="well">
+            <form asp-action="Search" method="post">
+                <div class="card mb-4">
+                    <h2 class="card-header">ค้นหา</h2>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="txt" placeholder="ชื่อผู้ใช้ , ชื่่อ , นามสกุล , หน่วยงาน/คณะ">
+                            <span class="input-group-btn">
+                                <input class="btn btn-secondary" type="submit" name="button" id="button" value="ค้นหา" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p>
+            <a asp-action="Register">เพิ่มบัญชีผู้ใช้</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Password)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PreNameId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Firstname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Lastname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GenderId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepartmentId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PositionId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Phonenumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserTypeId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PreName.PreName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Firstname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Lastname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gender.GenderName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Position.PositionName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phonenumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @if (item.Image != null)
+                            {
+                                <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" width="150" class="img-img-thumbnail" alt="Cinque Terre">
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserType.UserTypeName)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.UserId">แก้ไข</a> |
+                            <a asp-action="Details" asp-route-id="@item.UserId">รายละเอียด</a> |
+                            @Html.ActionLink("ลบ", "Delete", new { id = item.UserId },
+                                         new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

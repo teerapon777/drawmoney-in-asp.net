@@ -1,0 +1,37 @@
+﻿@model PJ_Teeradat.Models.TbApprovalresults
+
+@{
+    ViewData["Title"] = "EditApp";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>แก้ไขข้อมูล</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="EditApp">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ApprovalResultsId" />
+                    <div class="form-group">
+                        <label asp-for="ApprovalResultsName" class="control-label">ผลอนุมัติ</label>
+                        <input asp-for="ApprovalResultsName" class="form-control" />
+                        <span asp-validation-for="ApprovalResultsName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="บันทึก" class="btn btn-default" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="AppList">กลับสู่รายการ</a>
+        </div>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

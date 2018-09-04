@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbUsertype>
+
+@{
+    ViewData["Title"] = "UsTyList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการระดับผู้ใช้</h2>
+
+        <p>
+            <a asp-action="CreateUsTy">เพิ่มข้อมูล</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ระดับผู้ใช้
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserTypeName)
+                        </td>
+                        <td>
+                            <a asp-action="EditUsTy" asp-route-id="@item.UserTypeId">แก้ไข้</a> |
+                            @Html.ActionLink("ลบ", "DeleteUsTy", new { id = item.UserTypeId },
+                      new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

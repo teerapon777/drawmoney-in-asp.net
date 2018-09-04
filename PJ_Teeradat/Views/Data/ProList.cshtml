@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbProvince>
+
+@{
+    ViewData["Title"] = "ProList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+@{ if (ViewBag.UserType == "2")
+    {
+        <h2>รายการจังหวัด</h2>
+
+        <p>
+            <a asp-action="CreatePro">เพิ่มข้อมูล</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ชื่อจังหวัด
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProvinceName)
+                        </td>
+                        <td>
+                            <a asp-action="EditPro" asp-route-id="@item.ProvinceId">แก้ไข</a> |
+                            @Html.ActionLink("ลบ", "DeletePro", new { id = item.ProvinceId },
+                      new { onclick = "return confirm('คุณต้องการลบ y/n')" })
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>คุณไม่มีสิทธิ์การใช้งานหน้านี้</h2>
+    }
+
+}

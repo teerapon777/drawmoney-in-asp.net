@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PJ_Teeradat.Models.TbApprove>
+
+@{
+    ViewData["Title"] = "ApproveList";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+<h2>รายการผลอนุมัติ</h2>
+<div class="well">
+    <form asp-action="Search" method="post">
+        <div class="card mb-4">
+            <h2 class="card-header">ค้นหา</h2>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="txt" placeholder="ชื่่อโครงการ">
+                    <span class="input-group-btn">
+                        <input class=" btn btn-secondary" type="submit" name="button" id="button" value="ค้นหา" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApprovalResultsId)
+            </th>
+            <th>
+                วันที่ขอเบิก
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateApprove)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Project.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApprovalResults.ApprovalResultsName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Project.DateApplicant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateApprove)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Firstname)
+                @Html.DisplayFor(modelItem => item.User.Lastname)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ProjectId">รายละเอียดโครงการ</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
